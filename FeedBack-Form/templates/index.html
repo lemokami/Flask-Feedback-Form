@@ -1,0 +1,48 @@
+{% extends "layout.html" %} {% block body %}
+<h1>Feedback Form</h1>
+<form action="/submit" method="post">
+  Name: <input type="text" name="name" autocomplete="off" />
+  <br />
+  <br />
+  <br />
+  E-mail: <input type="email" name="email" autocomplete="off" />
+  <br />
+  <br />
+  <br />
+  What course did you opt for:
+  <select name="course">
+    <option value="Data Structures" selected>Data Structures</option>
+    <option value="Machine Learning">Machine Learning</option>
+    <option value="Basic Python">Python</option>
+    <option value="JavaScript">JavaScript</option>
+    <option value="Flask">Flask</option>
+  </select>
+  <br />
+  <br />
+  <br />
+  Rating :
+  <input type="radio" name="rating" value="5" />5
+  <input type="radio" name="rating" value="4" />4
+  <input type="radio" name="rating" value="3" />3
+  <input type="radio" name="rating" value="2" />2
+  <input type="radio" name="rating" value="1" />1
+  <input type="radio" name="rating" default value="0" />No Rating
+  <br />
+  <br />
+  <br />
+  Enter your Feedback :
+  <br /><br />
+  <textarea
+    placeholder="Enter your feedback..."
+    name="feedback"
+    id=""
+    cols="30"
+    rows="10"
+  ></textarea>
+  <br />
+  <br />
+  <br />
+  <input type="submit" value="Submit" />
+  <input type="reset" value="reset" />
+</form>
+{% endblock %}
